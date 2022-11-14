@@ -112,6 +112,9 @@ form {
   width: 100%;
   padding: var(--space);
 }
+form .fields {
+  flex-direction: column;
+}
 form .field {
   position: relative;
   flex-direction: column;
@@ -125,6 +128,7 @@ form .field label {
   top: 10px;
   left: 10px;
   transition: color 0.3s ease-in-out;
+  z-index: 2;
 }
 form .field input, form .field textarea, form .field select {
   border: var(--gray-3) 1px solid;
@@ -132,8 +136,86 @@ form .field input, form .field textarea, form .field select {
   padding: 10px;
   padding-top: 33px;
   font-size: 16px;
+  color: var(--dark-0);
+  outline: none;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.3s ease-in-out;
+  width: 100%;
+  background-color: transparent;
+}
+form .field input:focus, form .field textarea:focus, form .field select:focus {
+  border-color: var(--green);
+}
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
+  color: var(--green);
+}
+form .field input[readonly], form .field textarea[readonly], form .field select[readonly] {
+  border: none;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 0;
+}
+form .field input[readonly] + label, form .field textarea[readonly] + label, form .field select[readonly] + label {
+  color: var(--gray-0);
+  text-transform: uppercase;
+}
+form button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+}
+form button:hover {
+  background-color: var(--black-10);
+}
+form button:active {
+  background-color: var(--black-75);
+}
+form button:hover {
+  background-color: var(--green-hover);
+}
+form button:active {
+  background-color: var(--green-active);
 }
 
+@media (min-width: 1200px) {
+  form {
+    max-width: 400px;
+  }
+  form .fields {
+    flex-direction: row;
+  }
+  form .fields .field {
+    margin-right: var(--space);
+  }
+  form .fields .field:last-child {
+    margin-right: 0;
+  }
+  form .fields .field textarea {
+    min-height: 250px;
+  }
+  form button {
+    max-width: 340px;
+  }
+}
 .toast {
   position: relative;
   height: 80px;
@@ -153,6 +235,8 @@ form .field input, form .field textarea, form .field select {
   font-size: 32px;
   transition: 0.3s;
   color: var(--black-50);
+  min-width: 50px;
+  margin: 15px;
   cursor: pointer;
 }
 .toast .close:hover {
@@ -204,6 +288,7 @@ header.page-title hr {
   color: var(--white);
   justify-content: center;
   align-items: center;
+  margin-top: 18px;
 }
 .page > header h1 {
   font-size: 23px;
@@ -211,11 +296,14 @@ header.page-title hr {
   text-transform: uppercase;
 }
 .page > main {
+  margin-bottom: 80px;
   flex-direction: column;
 }
 .page > main .toast {
   position: fixed;
   bottom: 0;
+  left: 0;
+  z-index: 3;
 }
 .page > main .toast.open {
   transform: translateY(-80px);
@@ -230,7 +318,7 @@ header.page-title hr {
   justify-content: space-between;
   align-items: center;
   padding: var(--space);
-  z-index: 1;
+  z-index: 4;
 }
 .page footer.fixed button, .page footer.fixed a {
   min-width: 130px;
@@ -295,6 +383,16 @@ header.page-title hr {
   background-color: var(--black-active);
 }
 
+@media (min-width: 1200px) {
+  .page > header {
+    justify-content: flex-start;
+    padding-left: 185px;
+    min-height: 160px;
+  }
+  .page > header h1 {
+    font-size: 32px;
+  }
+}
 #header {
   min-width: 320px;
   width: 100%;

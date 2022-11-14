@@ -73,24 +73,52 @@
         </div>
         <hr class="italy">
     </header>
-    <section class="page blue" id="schedules-new">
+    <section class="page" id="profile">
 
         <header>
-            <h1>Escolha a Data</h1>
+            <h1>Editar Dados</h1>
         </header>
 
         <main>
-           <div class="calendar">
-            <div class="month">
+            <header class="page-title">
+                <h2>Dados Pessoais</h2>
+                <hr/>
+            </header>
 
-            </div>
-
-           </div>
             <form>
-              
+                <div class="field">
+                    <input type="text" name="name" id="name" />
+                    <label for="name">Nome Completo</label>
+                </div>
+                <div class="field">
+                    <input type="email" name="email" id="email" />
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="field">
+                    <input type="date" name="birth_at" id="birth_at" />
+                    <label for="birth_at">Data de Nascimento</label>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" name="docment" id="docment" />
+                        <label for="docment">Documento</label>
+                    </div>
+                    <div class="field">
+                        <input type="tel" name="phone" id="phone" />
+                        <label for="phone">Telefone</label>
+                    </div>
+                </div>
+                <div class="toast success open">
+                    Dados salvo com sucesso!
+                    <button type="button" class="close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
                 <footer class="fixed">
-                    <a href="index.html">Voltar</a>
-                    <button type="submit">Continuar</button>
+
+                    <button type="submit">SALVAR</button>
 
                 </footer>
             </form>
