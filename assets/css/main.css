@@ -581,7 +581,7 @@ header.page-title hr {
   background-color: var(--green-active);
 }
 
-@media (min-width 1200px) {
+@media (min-width: 1200px) {
   .calendar .month {
     margin: var(--space) 0;
   }
