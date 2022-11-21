@@ -505,8 +505,8 @@ header.page-title hr {
   border-radius: var(--border-radius);
   background: transparent;
   color: var(--black);
-  border: var(--space) 2px solid;
-  border-radius: var(--border-radius);
+  border: var(--gray-2) 2px solid;
+  border-radius: var(--boder-radius);
   color: var(--gray-2);
 }
 .calendar .month button:hover {
@@ -533,7 +533,7 @@ header.page-title hr {
   text-transform: uppercase;
   color: var(--gray-0);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
 }
 .calendar .weekdays li {
   justify-content: center;
@@ -543,8 +543,8 @@ header.page-title hr {
 }
 .calendar .days {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 12vw 12vw 12vw 12vw 12vw;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 12vw);
   grid-gap: 10px;
   color: var(--dark-0);
 }
@@ -581,9 +581,28 @@ header.page-title hr {
   background-color: var(--green-active);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
+  .calendar {
+    max-width: 992px;
+  }
   .calendar .month {
     margin: var(--space) 0;
+  }
+  .calendar .month h2 {
+    font-size: 44px;
+  }
+  .calendar .month .btn-today {
+    display: flex;
+  }
+  .calendar .weekdays li {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .calendar .days {
+    grid-template-rows: repeat(5, 141.7142857143px);
+  }
+  .calendar .days li {
+    font-size: 38px;
   }
 }
 #header {
