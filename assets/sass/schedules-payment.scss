@@ -81,9 +81,7 @@
                         padding-left: var(--space);
                         .faces {
                             width: 100%;
-                            &.flipped {
-                                transform: translate(-76px) rotate(180deg);
-                            }
+                            
                             svg {
                                 width: 340px;
                             }
