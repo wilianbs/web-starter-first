@@ -18,11 +18,9 @@
         color: var(--black-50);
         min-width: 50px;
         margin: 15px;
-        cursor: pointer;
         &:hover {
             color: var(--black-75);
         }
-
     }
     &.success {
         color: var(--success-color);

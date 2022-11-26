@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -88,30 +88,81 @@
         <hr class="italy" />
     </header>
 
-    <section id="schedules-complete" class="page green">
+    <section id="schedules-address" class="page blue">
 
         <header>
-            <h1>Pagamento efetuado</h1>
+            <h1>Endereço de cobrança</h1>
         </header>
 
         <main>
+            <form action="schedules-summary.html">
 
-            <header class="page-title">
-                <h2>Obrigado!</h2>
+                <a href="schedules-address-create.html" class="btn-create">Novo</a>
+
                 <hr />
-            </header>
 
-            <p>10 de julho de 2022</p>
-            <p>Número do Pedido: 000123 <small>Cartão de final 0987</small></p>
+                <div class="addresses">
+                    <label>
+                        <div>
+                            <input type="radio" name="address" value="1">
+                            <div class="circle">
+                                <div></div>
+                            </div>
+                            <address>
+                                <strong>Av. Paulista, 500</strong>
+                                Bela vista<br />
+                                São Paulo - SP<br />
+                                01310-100
+                            </address>
 
-            <footer class="fixed">
-                <a href="schedules.html">Agendamentos</a>
-            </footer>
+                        </div>
+                        <a href="schedules-address-update.html" class="btn-update">Editar</a>
+                    </label>
 
+                    <label>
+                        <div>
+                            <input type="radio" name="address" value="1">
+                            <div class="circle">
+                                <div></div>
+                            </div>
+                            <address>
+                                <strong>Av. Paulista, 500</strong>
+                                Bela vista<br />
+                                São Paulo - SP<br />
+                                01310-100
+                            </address>
+
+                        </div>
+                        <a href="schedules-address-update.html" class="btn-update">Editar</a>
+                    </label>
+
+                    <label>
+                        <div>
+                            <input type="radio" name="address" value="1">
+                            <div class="circle">
+                                <div></div>
+                            </div>
+                            <address>
+                                <strong>Av. Paulista, 500</strong>
+                                Bela vista<br />
+                                São Paulo - SP<br />
+                                01310-100
+                            </address>
+
+                        </div>
+                        <a href="schedules-address-update.html" class="btn-update">Editar</a>
+                    </label>
+                </div>
+
+                <footer class="fixed">
+                    <a href="schedules-payment.html">Voltar</a>
+                    <button type="submit">Continuar</button>
+                </footer>
+
+            </form>
         </main>
 
     </section>
-
 
 </body>
 

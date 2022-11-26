@@ -34,7 +34,6 @@
     }
 }
 
-
 @mixin button-black {
     @include button;
     background-color: var(--black);
@@ -58,6 +57,7 @@
         background-color: var(--gray-active);
     }
 }
+
 @mixin button-red {
     @include button;
     background-color: var(--red);
@@ -69,6 +69,7 @@
         background-color: var(--red-active);
     }
 }
+
 @mixin button-blue {
     @include button;
     background-color: var(--blue);
@@ -80,8 +81,3 @@
         background-color: var(--blue-active);
     }
 }
-
-
-
-
-

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -88,27 +88,40 @@
         <hr class="italy" />
     </header>
 
-    <section id="schedules-complete" class="page green">
+    <section id="change-photo" class="page">
 
         <header>
-            <h1>Pagamento efetuado</h1>
+            <h1>Mudar foto</h1>
         </header>
 
         <main>
-
             <header class="page-title">
-                <h2>Obrigado!</h2>
-                <hr />
+                <h1>Foto atual</h2>
+                    <hr />
             </header>
 
-            <p>10 de julho de 2022</p>
-            <p>Número do Pedido: 000123 <small>Cartão de final 0987</small></p>
+            <form>
 
-            <footer class="fixed">
-                <a href="schedules.html">Agendamentos</a>
-            </footer>
+                <img src="assets/images/user@4x.png" alt="Foto atual" id="photo-preview" />
+
+                <input type="file" name="photo" id="file" />
+
+                <input type="hidden" name="x" />
+                <input type="hidden" name="y" />
+                <input type="hidden" name="width" />
+                <input type="hidden" name="height" />
+
+                <button type="button" class="choose-photo">Escolher foto</button>
+
+                <footer class="fixed">
+                    <button type="submit">Salvar</button>
+                </footer>
+
+            </form>
 
         </main>
+
+    </section>
 
     </section>
 

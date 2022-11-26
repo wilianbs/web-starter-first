@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -88,30 +88,76 @@
         <hr class="italy" />
     </header>
 
-    <section id="schedules-complete" class="page green">
+    <section id="schedules-address-form" class="page blue">
 
         <header>
-            <h1>Pagamento efetuado</h1>
+            <h1>Editar endereço</h1>
         </header>
 
         <main>
+            <form actions="schedules-summary.html">
 
-            <header class="page-title">
-                <h2>Obrigado!</h2>
-                <hr />
-            </header>
+                <div class="fields zipcode">
+                    <div class="field">
+                        <input type="text" name="zipcode" id="zipcode" />
+                        <label for="zipcode">CEP</label>
+                    </div>
+                    <div class="field">
+                        <button type="button" id="btn-search">Buscar</button>
+                    </div>
+                </div>
 
-            <p>10 de julho de 2022</p>
-            <p>Número do Pedido: 000123 <small>Cartão de final 0987</small></p>
+                <div class="fields address-number">
 
-            <footer class="fixed">
-                <a href="schedules.html">Agendamentos</a>
-            </footer>
+                    <div class="field">
+                        <input type="text" name="address" id="address" />
+                        <label for="address">Endereço</label>
+                    </div>
 
+                    <div class="field">
+                        <input type="text" name="number" id="number" />
+                        <label for="number">Número</label>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <input type="text" name="complement" id="complement" />
+                    <label for="complement">Complemento</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="district" id="district" />
+                    <label for="district">Bairro</label>
+                </div>
+
+                <div class="fields">
+                    <div class="field">
+                        <input type="text" name="state" id="state" />
+                        <label for="state">Estado</label>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" name="country" id="country" />
+                        <label for="country">País</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="city" id="city" />
+                    <label for="city">Cidade</label>
+                </div>
+
+                <footer class="fixed">
+                    <a href="schedules-address.html">Voltar</a>
+                    <button type="submit">Cadastrar</button>
+                </footer>
+
+            </form>
         </main>
 
-    </section>
 
+    </section>
 
 </body>
 
